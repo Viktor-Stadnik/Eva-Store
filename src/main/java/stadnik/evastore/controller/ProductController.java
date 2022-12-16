@@ -75,7 +75,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    @ApiOperation(value = "Create a product by id")
+    @ApiOperation(value = "Get a product by id")
     public ProductResponseDto get(@PathVariable Long id) {
         return productMapper.toResponseDto(productService.findById(id));
     }
